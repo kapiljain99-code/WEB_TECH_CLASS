@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ShopEase | E-Commerce</title>
+    <link rel="stylesheet" href="commerce.css">
+</head>
+<body>
+
+<header>
+    <h1>🛍️ ShopEase</h1>
+    <button id="themeToggle">🌙</button>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="products">
+    <article class="card">
+        <figure>
+            <img src="image.png" alt="Headphones">
+            <figcaption>Wireless Headphones</figcaption>
+        </figure>
+        <p class="price">₹2,999</p>
+        <meter value="4.5" min="0" max="5"></meter>
+        
+        <p class="stock">In Stock</p>
+    </article>
+
+    <article class="card">
+        <figure>
+            <img src="image2.png" alt="Smart Watch">
+            <figcaption>Smart Watch</figcaption>
+        </figure>
+        <p class="price">₹4,999</p>
+        <meter value="4" min="0" max="5"></meter>
+        
+        <p class="stock">Limited Stock</p>
+    </article>
+</section>
+
+<aside>
+    <details>
+        <summary>🔥 Today’s Offers</summary>
+        <p>20% off on Electronics</p>
+        <p>Buy 1 Get 1 Free on Accessories</p>
+    </details>
+</aside>
+
+<footer>
+    <p>© <time>2026</time> Gustavopolos</p>
+    <address>Bangalore, India</address>
+</footer>
+
+<script>
+    document.getElementById("themeToggle").onclick = function () {
+        document.body.classList.toggle("dark");
+    };
+</script>
+
+</body>
+</html>
