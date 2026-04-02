@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    margin: 0;
+}
+
+nav {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #007bff;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.products {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.product button {
+    margin-top: 10px;
+    background: green;
+}
+
+.product button:hover {
+    background: darkgreen;
+}

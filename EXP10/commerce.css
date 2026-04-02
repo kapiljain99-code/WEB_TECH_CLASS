@@ -1,0 +1,237 @@
+:root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1f2937;
+    --primary: #2563eb;
+    --accent: #00c6ff;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e5e7eb;
+    --primary: #38bdf8;
+    --accent: #6366f1;
+}
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    background: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary);
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* PRODUCT CARD */
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* PRICE */
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* BUTTON */
+.btn {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* ================= ADD PRODUCT FORM ================= */
+
+.form-box {
+    max-width: 450px;
+    margin: 50px auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.form-box input {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-box input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 6px var(--primary);
+}
+
+/* BACK BUTTON */
+.back {
+    background: gray;
+    margin-top: 10px;
+}
+
+/* ================= CART ================= */
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item h3 {
+    margin: 0;
+}
+
+.cart-item input {
+    width: 60px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* REMOVE BUTTON */
+.remove {
+    display: inline-block;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* TOTAL */
+h2 {
+    text-align: center;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

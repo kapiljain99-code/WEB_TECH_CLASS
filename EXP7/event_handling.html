@@ -3,6 +3,82 @@
 <head>
     <title>Gustavopolos - Online Store</title>
 
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+
+        header, footer {
+            text-align: center;
+            background: #1e293b;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #1e293b;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        img {
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 8px 12px;
+            border: none;
+            background: #22c55e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        form {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 5px;
+            width: 100%;
+        }
+
+        aside {
+            background: #e5e7eb;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
     <script>
         function addToCart(product) {
             alert(product + " added to cart!");
@@ -17,11 +93,11 @@
         }
 
         function highlight(product) {
-            product.style.background = "#f0f0f0";
+            product.style.background = "#e0f2fe";
         }
 
         function normal(product) {
-            product.style.background = "transparent";
+            product.style.background = "white";
         }
 
         function showTotal() {
@@ -50,13 +126,11 @@
 </header>
 
 <nav>
-    <a href="#">Home</a> |
-    <a href="#">Products</a> |
-    <a href="#">Offers</a> |
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Offers</a>
     <a href="#">Contact</a>
 </nav>
-
-<hr>
 
 <section>
     <h2>Featured Products</h2>
@@ -80,8 +154,6 @@
         <button onclick="addToCart('Wireless Headphones')">Add to Cart</button>
     </article>
 
-    <br>
-
     <article onmouseover="highlight(this)" onmouseout="normal(this)">
         <figure>
             <img src="image.png" width="150"
@@ -103,8 +175,6 @@
 
 </section>
 
-<hr>
-
 <aside>
     <h3>Special Offers</h3>
     <details onclick="alert('Check out today’s best deals!')">
@@ -114,18 +184,17 @@
     </details>
 </aside>
 
-<hr>
-
 <section>
     <h2>Place Your Order</h2>
 
     <form onsubmit="confirmOrder()">
-
         <fieldset>
             <legend>Customer Details</legend>
 
             Name:<br>
-            <input type="text" required onfocus="this.style.background='lightyellow'" onblur="this.style.background='white'"><br><br>
+            <input type="text" required 
+                   onfocus="this.style.background='lightyellow'" 
+                   onblur="this.style.background='white'"><br><br>
 
             Email:<br>
             <input type="email"><br><br>
@@ -148,11 +217,8 @@
 
             <input type="submit" value="Order Now">
         </fieldset>
-
     </form>
 </section>
-
-<hr>
 
 <footer>
     <p>© <time>2026</time> gustavopolos</p>

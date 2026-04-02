@@ -66,14 +66,14 @@ function clearDisplay() {
 function calculator(op) {
     var display = document.getElementById("display");
 
-    // storing first number before any input....... :)
+   
     if (op == '+' || op == '-' || op == '*' || op == '/') {
         num1 = Number(display.value);
         operator = op;
         waitingForSecondNumber = true;
     }
 
-    //caculating the final result ...........  :)
+   
     if (op == '=') {
         var num2 = Number(display.value);
         var result = 0;
